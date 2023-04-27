@@ -20,7 +20,7 @@ public class Movie {
     private String imdbId;
     private String title;
     private String releaseDate;
-    private String trailerLinker;
+    private String trailerLink;
     private String poster;
     private List<String> genres;
     private List<String> backdrops;
@@ -30,6 +30,16 @@ public class Movie {
 
     public List<Review> getReviewIds() {
         return reviewIds;
+    }
+
+    public Movie(String imdbId, String title, String releaseDate, String trailerLink, String poster, List<String> genres, List<String> backdrops) {
+        this.imdbId = imdbId;
+        this.title = title;
+        this.releaseDate = releaseDate;
+        this.trailerLink = trailerLink;
+        this.poster = poster;
+        this.genres = genres;
+        this.backdrops = backdrops;
     }
 
     public void setReviewIds(List<Review> reviewIds) {
@@ -69,11 +79,11 @@ public class Movie {
     }
 
     public String getTrailerLinker() {
-        return trailerLinker;
+        return trailerLink;
     }
 
     public void setTrailerLinker(String trailerLinker) {
-        this.trailerLinker = trailerLinker;
+        this.trailerLink = trailerLinker;
     }
 
     public String getPoster() {
